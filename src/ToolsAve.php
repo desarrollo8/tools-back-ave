@@ -11,20 +11,30 @@ class ToolsAve
     #--------------------------╔═════════════════════════════════╗--------------------------#
     #--------------------------║    validar formato de fecha     ║--------------------------#
     #--------------------------╚═════════════════════════════════╝--------------------------#
-    public static function formatDateValidate($format)
+    public static function formatDateValidate($date)
     {
         $formats = ['d/m/Y H:i:s', 'd/m/Y H:i', 'Y-m-d\TH:i:sP'];
 
         foreach ($formats as $format) {
             try {
-                $d = Carbon::createFromFormat($format, $format);
+                $d = Carbon::createFromFormat($format, $date);
                 // Verifica que la fecha formateada coincida con la fecha de entrada
-                if ($d && $d->format($format) === $format) {
+                if ($d && $d->format($format) === $date) {
                     return $format;
                 }
             } catch (\Exception $e) {
                 // Continúa con el siguiente formato
             }
+        }
+
+        // Manejo de ISO 8601
+        try {
+            $d = Carbon::parse($date);
+            if ($d && $d->toIso8601String() === $date) {
+                return 'ISO 8601';
+            }
+        } catch (\Exception $e) {
+            // Si no es válido, retorna false
         }
 
         return false;
@@ -196,5 +206,4 @@ class ToolsAve
         }
         return $string;
     }
-    
 }
