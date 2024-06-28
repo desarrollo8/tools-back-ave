@@ -13,7 +13,7 @@ class ToolsAve
     #--------------------------╚═════════════════════════════════╝--------------------------#
     public static function formatDateValidate($date)
     {
-        $formats = ['d/m/Y H:i:s', 'd/m/Y H:i', 'Y-m-d\TH:i:sP'];
+        $formats = ['d/m/Y H:i:s', 'd/m/Y H:i', 'Y-m-d\TH:i:sP', 'Y-m-d H:i:s'];
 
         foreach ($formats as $format) {
             try {
