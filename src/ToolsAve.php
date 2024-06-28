@@ -196,4 +196,5 @@ class ToolsAve
         }
         return $string;
     }
+    
 }
