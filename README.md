@@ -17,6 +17,7 @@ composer require aveonline/toolsave
 | LLAMADO METODOS CLASE            | DESCRIPCIÓN METODO                                                                                        |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `ToolsAve::formatDateValidate()` | valida el formato de fecha, actualmente solo hay 3 formatos: `d/m/Y H:i:s`, `d/m/Y H:i`, `Y-m-d\TH:i:sP`. |
+| `ToolsAve::specialCharacterClear('ho»la')` | limpiar caracteres especiales retorna `hola`. |
 
 ## Mantenedores
 
