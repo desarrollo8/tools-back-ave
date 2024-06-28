@@ -3,7 +3,7 @@
     "description": "libreria para guardar todos los tools dinamicos",
     "type": "library",
     "require": {
-        "nesbot/carbon": "^3.6"
+        "nesbot/carbon": "^1.0 || ^2.0 || ^3.0"
     },
     "license": "MIT",
     "autoload": {
