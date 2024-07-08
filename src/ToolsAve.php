@@ -51,7 +51,7 @@ class ToolsAve
                     return $format;
                 }
             } catch (\Exception $e) {
-                // Continúa con el siguiente formato
+                return false;
             }
         }
 
@@ -69,7 +69,7 @@ class ToolsAve
     }
 
     #--------------------------╔═════════════════════════════════╗--------------------------#
-    #--------------------------║  quitar caracteres especiales   ║--------------------------#
+    #--------------------------║  quitar caracteres esoecuakes   ║--------------------------#
     #--------------------------╚═════════════════════════════════╝--------------------------#
     public static function specialCharacterClear(String $string)
     {
