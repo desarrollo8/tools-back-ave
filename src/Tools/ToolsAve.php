@@ -9,22 +9,25 @@ use Carbon\Carbon;
 
 /**
  * para subir cambios a la librería, se debe agregar un tag de versión
- *primero modificar el composer.json en la key versión
+ * primero modificar el composer.json en la key versión
  *
  *{
  *   "versión":"1.0.1"
  *}
  *
- *segundo crear el commit
- *git add {ruta de los archivos modificados incluyendo composer.json}
- *git commit -m "tu commit"
+ * segundo crear el commit
+ * git add {ruta de los archivos modificados incluyendo composer.json}
+ * git commit -m "tu commit"
  *
- *tercero crear tag de versión con la misma del composer.json
- *git tag -a v1.0.1 -m "Versión 1.0.1"
+ * tercero crear tag de versión con la misma del composer.json
+ * git tag -a v1.0.1 -m "Versión 1.0.1"
  *
- *cuarto subir cambios con el tag, este comando subirá tanto tus cambios
- *commiteados como los tags
- *git push --tags
+ * cuarto, subir los cambios del commit
+ * git push origin branch
+ *
+ * quinto subir cambios con el tag, este comando subirá tanto tus cambios
+ * commiteados como los tags
+ * git push --tags
  */
 class ToolsAve
 {
