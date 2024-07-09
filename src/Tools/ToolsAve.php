@@ -28,6 +28,14 @@ use Carbon\Carbon;
  * quinto subir cambios con el tag, este comando subirá tanto tus cambios
  * commiteados como los tags
  * git push --tags
+ * 
+ * si despues de hacer esto, sale un error de que el commit no esta asociado a ninguna rama en github,
+ * se deve crear una nueva rama con 
+ * git checkout -b nueva_rama hash_commit
+ * push origin nueva_rama
+ * 
+ * despues hacer el pull request en el repositorio de github
+ * con eso ya quedaria asociado el commit al tag
  */
 class ToolsAve
 {
