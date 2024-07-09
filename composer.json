@@ -1,15 +1,15 @@
 {
-    "name": "aveonline/toolsave",
+    "name": "aveonline/tools",
     "description": "libreria para guardar todos los tools dinamicos",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "type": "library",
     "require": {
-        "nesbot/carbon": "^1.0 || ^2.0 || ^3.0"
+        "nesbot/carbon": "*"
     },
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Aveonline\\ToolsAve\\": "src/"
+            "Aveonline\\ToolsAve\\": "src/Tools/"
         }
     },
     "authors": [
