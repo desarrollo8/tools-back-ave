@@ -51,7 +51,7 @@ class ToolsAve
                     return $format;
                 }
             } catch (\Exception $e) {
-                return false;
+                // return false;
             }
         }
 
