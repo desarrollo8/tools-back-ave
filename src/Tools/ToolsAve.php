@@ -53,7 +53,12 @@ class ToolsAve
             'D, d M Y H:i:s O', 'l, d-M-y H:i:s T', 'l, d-M-Y H:i:s T',
             'Y-m-d\TH:i:sP', 'Y-m-d H:i:s.u'
         ];
-
+    
+        // Asegurarse de que la parte de los microsegundos tenga exactamente 6 dígitos
+        $date = preg_replace_callback('/\.\d+/', function ($matches) {
+            return '.' . str_pad(substr($matches[0], 1), 6, '0');
+        }, $date);
+    
         foreach ($formats as $format) {
             try {
                 $d = Carbon::createFromFormat($format, $date);
@@ -65,7 +70,7 @@ class ToolsAve
                 // return false;
             }
         }
-
+    
         // Manejo de ISO 8601
         try {
             $d = Carbon::parse($date);
@@ -75,7 +80,7 @@ class ToolsAve
         } catch (\Exception $e) {
             // Si no es válido, retorna false
         }
-
+    
         return false;
     }
 
