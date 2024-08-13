@@ -51,7 +51,7 @@ class ToolsAve
             'Y-m-d', 'd/m/Y', 'm/d/Y', 'd.m.Y', 'Y/m/d', 'Y.m.d',
             'd M Y', 'd F Y', 'F d, Y', 'l, d F Y', 'l, F d, Y',
             'D, d M Y H:i:s O', 'l, d-M-y H:i:s T', 'l, d-M-Y H:i:s T',
-            'Y-m-d\TH:i:sP', 'Y-m-d H:i:s.u'
+            'Y-m-d\TH:i:sP', 'Y-m-d H:i:s.u', 'Y/m/d h:i:s a'
         ];
     
         // Asegurarse de que la parte de los microsegundos tenga exactamente 6 dígitos
