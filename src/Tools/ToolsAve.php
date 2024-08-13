@@ -46,6 +46,9 @@ class ToolsAve
     #--------------------------╚═════════════════════════════════╝--------------------------#
     public static function formatDateValidate($date)
     {
+
+        $date = str_ireplace(['am', 'pm'], '', $date);
+
         $formats = [
             'd/m/Y H:i:s', 'd/m/Y H:i', 'Y-m-d\TH:i:sP', 'Y-m-d H:i:s',
             'Y-m-d', 'd/m/Y', 'm/d/Y', 'd.m.Y', 'Y/m/d', 'Y.m.d',
